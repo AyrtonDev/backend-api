@@ -8,3 +8,8 @@ class User(BaseModel):
     username: str
     email: str
     city: str
+
+class ListUser(BaseModel):
+    [
+        User
+    ]

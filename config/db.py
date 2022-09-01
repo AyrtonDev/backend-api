@@ -1,6 +1,12 @@
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
 
-conn = MongoClient("mongodb+srv://admin_ayrton:Noty2015@cluster0.xsrqy.mongodb.net/?retryWrites=true&w=majority")
+load_dotenv()
+
+KEY = os.getenv("URI_DB")
+
+conn = MongoClient(KEY)
 
 print("connected to database")
 
